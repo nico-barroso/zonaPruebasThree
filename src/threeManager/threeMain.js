@@ -11,17 +11,15 @@ export const threeBuilder = (container) => {
   let model;
   let lastPointerEvent = null;
 
-  modelLoader(scene, "src/threeManager/models/combat_robot/scene.gltf").then(
-    (loadedModel) => {
-      loadedModel.traverse((child) => {
-        if (child.isMesh) {
-          child.castShadow = true;
-          child.receiveShadow = true;
-        }
-      });
-      model = loadedModel;
-    }
-  );
+  modelLoader(scene, "models/combat_robot/scene.gltf").then((loadedModel) => {
+    loadedModel.traverse((child) => {
+      if (child.isMesh) {
+        child.castShadow = true;
+        child.receiveShadow = true;
+      }
+    });
+    model = loadedModel;
+  });
 
   events();
   ticker();
