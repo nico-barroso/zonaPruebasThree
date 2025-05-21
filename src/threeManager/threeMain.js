@@ -6,13 +6,12 @@ export const threeBuilder = (container) => {
   const renderer = createRenderer(container);
   const scene = createScene(renderer);
   const camera = createCamera();
-
   new OrbitControls(camera, renderer.domElement);
 
   let model;
   let lastPointerEvent = null;
 
-  modelLoader(scene, "public/models/combat_robot/scene.gltf").then(
+  modelLoader(scene, "src/threeManager/models/combat_robot/scene.gltf").then(
     (loadedModel) => {
       loadedModel.traverse((child) => {
         if (child.isMesh) {
