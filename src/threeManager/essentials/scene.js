@@ -15,13 +15,10 @@ function dinamicRangeImg(scene, renderer) {
   const pmremGenerator = new PMREMGenerator(renderer);
   pmremGenerator.compileEquirectangularShader();
 
-  rgbeLoader.load(
-    "src/threeManager/images/minedump_flats_4k.hdr",
-    (texture) => {
-      const envMap = pmremGenerator.fromEquirectangular(texture).texture;
-      scene.environment = envMap;
-      texture.dispose();
-      pmremGenerator.dispose();
-    }
-  );
+  rgbeLoader.load("images/minedump_flats_4k.hdr", (texture) => {
+    const envMap = pmremGenerator.fromEquirectangular(texture).texture;
+    scene.environment = envMap;
+    texture.dispose();
+    pmremGenerator.dispose();
+  });
 }
