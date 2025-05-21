@@ -1,8 +1,9 @@
-# No se que poner aquí
+# Base para creación de entornos tridimensionales con Three.JS
 
 ## Estructura básica de three
 
-Una escena 3D está compuesta de bla bla bla
+Una escena 3D está compuesta por una **escena**, una o más **cámaras**, un **renderizador**, y diferentes elementos como **modelos**, **luces** y **materiales**.
+
 
 ### La escena
 
@@ -34,15 +35,15 @@ En three puedes usar raycasting para detectar las interacciones del usuario con 
 
 ### ¿Cómo funciona?
 
-Buscadlo por internet porque no lo quiero escribir.
+Una escena 3D está compuesta por una **escena**, una o más **cámaras**, un **renderizador**, y diferentes elementos como **modelos**, **luces** y **materiales**.
 
 # Estructura rexuli xulisima
 
 ---> threeMain.js Gestiona todos los módulos
-| // Elementos básicos
-|-> camera.js
-|-> render.js
-|-> scene.js
-| // Utilidades
-|-> rayCasting.js
-|-> modelLoader.js -> Gestiona el GLTF
+|   /essentials    // Elementos básicos
+|->   camera.js
+|->   render.js
+|->   scene.js
+|   /utilities     // Utilidades varias básicas
+|->   rayCasting.js
+|->   modelLoader.js -> Gestiona el GLTF
